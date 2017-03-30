@@ -1,0 +1,13 @@
+mysql: [Warning] Using a password on the command line interface can be insecure.
+wallet_id	name	product
+100	shirol	laptop
+100	shirol1	laptop1
+100	shirol2	laptop2
+100	shirol3	laptop3
+100	shirol4	laptop4
+100	shirol5	laptop5
+100	shirol6	laptop6
+100	shirol7	laptop7
+100	shirol8	laptop8
+100	shirol9	laptop9
+100	shirollllll	laptoppppp

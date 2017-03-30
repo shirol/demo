@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
+<link rel="stylesheet" href="/static/style1.css" type="text/css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+  <script>
+
+  $(document).ready(function() {
+
+    	$("#from_date1").datepicker();
+
+	$("#to_date1").datepicker();
+
+	$("#from_date2").datepicker();
+
+	$("#to_date2").datepicker();
+
+	$("#from_date3").datepicker();
+
+	$("#to_date3").datepicker();
+
+  });
+
+  </script>
+
+   <script type="text/javascript"> 
+
+        function displayForm(c){ 
+
+            if(c.value == "1"){ 
+
+				document.getElementById("date1").style.visibility='visible'; 
+
+				document.getElementById("date2").style.visibility='hidden';
+
+				document.getElementById("date3").style.visibility='hidden';
+
+    				 //document.getElementById("to_date").style.visibility='visible'; 
+
+		              } 
+
+            else if(c.value =="2"){ 
+
+                		document.getElementById("date2").style.visibility='visible'; 
+
+				document.getElementById("date1").style.visibility='hidden';
+
+				document.getElementById("date3").style.visibility='hidden';
+
+				//document.getElementById("to_date").style.visibility='hidden'; 
+
+            } 
+
+ 	    else if(c.value =="3"){ 
+
+		                document.getElementById("date3").style.visibility='visible'; 
+
+				document.getElementById("date1").style.visibility='hidden';
+
+				document.getElementById("date2").style.visibility='hidden';
+
+				//document.getElementById("to_date").style.visibility='hidden'; 
+
+            }
+
+            else{ 
+
+            } 
+
+         }
+
+	 </script>
+
+</head>
+
+<body>
+
+<form action="/login1" method="POST">
+
+	<input value="1" type="radio" name="formselector" onclick="displayForm(this)">transaction1 &nbsp;</label>
+
+    <span id="date1" style="visibility:hidden">	
+
+    From: <input type="date" id="from_date1" name="from_date1">
+
+    To: <input type="date" id="to_date1" name="to_date1"/></span><br/><br/>
+
+
+	<input value="2" type="radio" name="formselector" onclick="displayForm(this)">transaction2 &nbsp;</label>
+
+    <span id="date2" style="visibility:hidden">	
+
+    From: <input id="from_date2" name="from_date1">
+
+    To: <input id="to_date2" name="to_date1"/></span><br/><br/>
+	
+
+	<input value="3" type="radio" name="formselector" onclick="displayForm(this)">transaction3 &nbsp;</label>
+
+    <span id="date3" style="visibility:hidden">	
+
+    From: <input id="from_date3" name="from_date1">
+
+    To: <input id="to_date3" name="to_date1" /></span><br/><br/>
+
+	<input type="submit" value="Query" name="submit"/>
+<!--	<input type="clear" value="clear" name="clear"/>-->
+
+</form>
+
+</body>
+
+</html>

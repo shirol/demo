@@ -1,0 +1,88 @@
+{% block head %}
+
+<link rel="stylesheet" href="/static/style1.css" type="text/css">
+
+<style>
+
+body {
+background-color:red;
+}
+</style>
+
+   <script type="text/javascript"> 
+
+        function displayForm(c){ 
+
+            if(c.value == "1"){ 
+                        document.getElementById("date").style.visibility='visible'; 
+	}
+            else if(c.value =="2"){ 
+		        document.getElementById("date").style.visibility='visible';
+	} 
+
+                        else if(c.value =="3"){ 
+
+                                document.getElementById("date").style.visibility='visible';
+            }
+
+		else if(c.value =="4"){ 
+                        document.getElementById("date").style.visibility='visible';
+        } 
+
+                        else if(c.value =="5"){ 
+
+                                document.getElementById("date").style.visibility='visible';
+            }
+
+            else{
+
+            } 
+
+         }
+
+ </script>
+
+{% endblock %}
+
+{% block body %}
+
+<form action = "/login1" method = "POST">
+
+<div class="login">
+                <div class="login-screen">
+                        <div class="app-title">
+                                <h1>Login</h1>
+                        </div>
+
+   <input value="1" type="radio" name="formselector" onclick="displayForm(this)">Transaction-1 &nbsp;</label><br /><br />
+
+   <input value="2" type="radio" name="formselector" onclick="displayForm(this)">Transaction-2 &nbsp;</label></br /><br />
+
+   <input value="3" type="radio" name="formselector" onclick="displayForm(this)">Transaction-3 &nbsp;</label><br /><br />
+
+   <input value="4" type="radio" name="formselector" onclick="displayForm(this)">Transaction-4 &nbsp;</label><br /><br />
+
+   <input value="5" type="radio" name="formselector" onclick="displayForm(this)">Transaction-5 &nbsp;</label><br /><br />
+
+      <span id="date" style="visibility:hidden">
+  
+
+		<div class="login-form">
+                                <div class="control-group">
+                                <input type="date" class="login-field" value="" placeholder="start date" name="start_date">
+                                <label class="login-field-icon fui-user" for="login-name"></label>
+                                </div>
+
+                                <div class="control-group">
+                                <input type="date" class="login-field" value="" placeholder="end date" name="end_date">
+                                <label class="login-field-icon fui-lock" for="login-pass"></label>
+                                </div>
+
+                <input type="submit" value="submit" class="btn btn-primary btn-large btn-block" name = "submit" >
+                            <br>
+                        </div>
+                </div>
+        </div>
+</form>
+
+{% endblock %}
